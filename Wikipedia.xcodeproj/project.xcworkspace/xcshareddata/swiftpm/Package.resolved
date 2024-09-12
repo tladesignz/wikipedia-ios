@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "envoy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/greatfire/envoy",
+      "state" : {
+        "branch" : "master",
+        "revision" : "85a0c7891c2f1a937599e320153cb20b45f7a129"
+      }
+    },
+    {
       "identity" : "swift-log",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log",
