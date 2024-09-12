@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ncK-V0-zLz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ncK-V0-zLz">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -610,10 +610,68 @@
             </objects>
             <point key="canvasLocation" x="3761" y="-157"/>
         </scene>
+        <!--Welcome Envoy View Controller-->
+        <scene sceneID="J3j-Nt-5GX">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeEnvoyViewController" id="bDm-Lt-S5x" customClass="WelcomeEnvoyViewController" customModule="Wikipedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="09U-A4-YSr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q1w-KB-bxE"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="va3-9l-h9N">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4x-64-ffu">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="FnE-x2-vL4">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="18"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Hft-CC-rb1">
+                                        <rect key="frame" x="131.5" y="34" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="FnE-x2-vL4" firstAttribute="top" secondItem="M4x-64-ffu" secondAttribute="top" id="ABC-rt-gXp"/>
+                                    <constraint firstItem="Hft-CC-rb1" firstAttribute="centerX" secondItem="M4x-64-ffu" secondAttribute="centerX" id="JNV-k1-RLU"/>
+                                    <constraint firstItem="Hft-CC-rb1" firstAttribute="top" secondItem="FnE-x2-vL4" secondAttribute="bottom" constant="16" id="Xsc-hb-yh4"/>
+                                    <constraint firstItem="FnE-x2-vL4" firstAttribute="leading" secondItem="M4x-64-ffu" secondAttribute="leading" id="cwr-rW-LQq"/>
+                                    <constraint firstAttribute="trailing" secondItem="FnE-x2-vL4" secondAttribute="trailing" id="gVf-WN-13W"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hft-CC-rb1" secondAttribute="bottom" priority="250" constant="94" id="jGB-FC-cIV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="M4x-64-ffu" secondAttribute="trailing" id="IGX-Do-slW"/>
+                            <constraint firstAttribute="bottom" secondItem="M4x-64-ffu" secondAttribute="bottom" id="c9r-JM-SNH"/>
+                            <constraint firstItem="M4x-64-ffu" firstAttribute="top" secondItem="va3-9l-h9N" secondAttribute="top" id="mCk-RX-zDd"/>
+                            <constraint firstItem="M4x-64-ffu" firstAttribute="leading" secondItem="va3-9l-h9N" secondAttribute="leading" id="z2n-mx-Zqw"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="150"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Hft-CC-rb1" id="At7-3B-WhE"/>
+                        <outlet property="descriptionLabel" destination="FnE-x2-vL4" id="bPJ-jf-7IT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJ8-XQ-P50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6662" y="323"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="Fi0-7O-Fk0">
-            <size key="intrinsicContentSize" width="71" height="40.5"/>
+            <size key="intrinsicContentSize" width="51" height="33"/>
         </designable>
     </designables>
 </document>

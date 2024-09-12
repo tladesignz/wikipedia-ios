@@ -51,6 +51,8 @@ class WMFWelcomeContainerViewController: ThemeableViewController {
             return true
         case .analytics:
             return true
+        case .envoy:
+            return true
         }
     }
 

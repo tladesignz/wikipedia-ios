@@ -20,7 +20,7 @@ class PreviewWebViewContainer: UIView, WKNavigationDelegate, Themeable {
         configuration.applicationNameForUserAgent = "WikipediaApp"
         
 
-        let newWebView = WKWebView(frame: CGRect.zero, configuration: configuration)
+        let newWebView = WikiEnvoy.getWebView(frame: .zero, configuration: configuration)
         newWebView.isOpaque = false
         newWebView.scrollView.backgroundColor = .clear
         wmf_addSubviewWithConstraintsToEdges(newWebView)

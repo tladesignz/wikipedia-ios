@@ -3,13 +3,18 @@
 // UIPageViewController subclass at all. WMFWelcomeInitialViewController embeds a UIPageViewController
 // in such a container view.
 class WMFWelcomeInitialViewController: ThemeableViewController {
+
     @objc var completionBlock: (() -> Void)?
+
+    @objc var shouldShowOnboarding = true
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let vc = segue.destination as? WMFWelcomePageViewController else {
             assertionFailure("Expected a WMFWelcomePageViewController")
             return
         }
         vc.apply(theme: theme)
+        vc.shouldShowOnboarding = shouldShowOnboarding
         vc.completionBlock = completionBlock
     }
     

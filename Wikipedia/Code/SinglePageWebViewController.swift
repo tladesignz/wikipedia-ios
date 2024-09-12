@@ -60,7 +60,7 @@ class SinglePageWebViewController: ViewController {
     }()
 
     private lazy var webView: WKWebView = {
-        let webView = WKWebView(frame: UIScreen.main.bounds, configuration: webViewConfiguration)
+        let webView = WikiEnvoy.getWebView(frame: UIScreen.main.bounds, configuration: webViewConfiguration)
         webView.navigationDelegate = self
         webView.uiDelegate = self
         return webView

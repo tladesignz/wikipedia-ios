@@ -38,11 +38,18 @@ class WMFWelcomePanelViewController: ThemeableViewController {
 
         // If the button itself was directly an arranged stackview subview we couldn't
         // set padding contraints and also get clean collapsing when enabling isHidden.
-        nextButtonContainerView.isHidden = welcomePageType != .analytics
-        
+        nextButtonContainerView.isHidden = true
+
+        NotificationCenter.default.addObserver(self, selector: #selector(envoyStarted), name: .envoyStarted, object: nil)
+
         view.wmf_configureSubviewsForDynamicType()
     }
-    
+
+    @objc
+    private func envoyStarted(_ notification: Notification? = nil) {
+        nextButtonContainerView.isHidden = false
+    }
+
     private func embedContainerControllerView() {
         if let containerController = containerController {
             containerController.apply(theme: theme)
@@ -62,6 +69,8 @@ class WMFWelcomePanelViewController: ThemeableViewController {
             return WMFWelcomeLanguageTableViewController.wmf_viewControllerFromWelcomeStoryboard()
         case .analytics:
             return WMFWelcomeAnalyticsViewController.wmf_viewControllerFromWelcomeStoryboard()
+        case .envoy:
+            return WelcomeEnvoyViewController.wmf_viewControllerFromWelcomeStoryboard()
         }
     }()
 
@@ -75,6 +84,8 @@ class WMFWelcomePanelViewController: ThemeableViewController {
             titleLabel.text = WMFLocalizedString("welcome-languages-search-title", value:"Search in over 300 languages", comment:"Title for welcome screen describing Wikipedia languages")
         case .analytics:
             titleLabel.text = WMFLocalizedString("welcome-data-privacy-title", value:"Data & Privacy", comment:"Title for welcome screen explaining data usage in the app")
+        case .envoy:
+            titleLabel.text = WMFLocalizedString("welcome-envoy-title", value: "Envoy", comment: "Title for welcome screen explaining Envoy")
         }
     
         nextButton.setTitle(CommonStrings.getStartedTitle, for: .normal)

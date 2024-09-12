@@ -1631,6 +1631,12 @@
 		83FDE79B293564AC006D55FE /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FDE798293564AC006D55FE /* Link.swift */; };
 		982800D624D302BF004B1850 /* EventPlatformClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982800D524D302BF004B1850 /* EventPlatformClient.swift */; };
 		A05D237B2C8F266C006E4DDC /* GreatfireEnvoy in Frameworks */ = {isa = PBXBuildFile; productRef = A05D237A2C8F266C006E4DDC /* GreatfireEnvoy */; };
+		A065203C2C933939000165D7 /* WelcomeEnvoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */; };
+		A065203D2C933940000165D7 /* WelcomeEnvoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */; };
+		A065203E2C933941000165D7 /* WelcomeEnvoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */; };
+		A065203F2C933EB2000165D7 /* WikiEnvoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */; };
+		A06520402C933EB2000165D7 /* WikiEnvoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */; };
+		A06520412C933EB3000165D7 /* WikiEnvoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */; };
 		A452F9F824081A5500D8ED09 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A452F9F624081A5500D8ED09 /* MockCLLocationManager.swift */; };
 		A452F9F924081A5500D8ED09 /* MockCLHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A452F9F724081A5500D8ED09 /* MockCLHeading.swift */; };
 		A452F9FB24081A7200D8ED09 /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A452F9FA24081A7200D8ED09 /* LocationManagerTests.swift */; };
@@ -3833,6 +3839,8 @@
 		83FD0A5B29913A4D00D459A8 /* Wikipedia 7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Wikipedia 7.xcdatamodel"; sourceTree = "<group>"; };
 		83FDE798293564AC006D55FE /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		982800D524D302BF004B1850 /* EventPlatformClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPlatformClient.swift; sourceTree = "<group>"; };
+		A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiEnvoy.swift; sourceTree = "<group>"; };
+		A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeEnvoyViewController.swift; sourceTree = "<group>"; };
 		A452F9F624081A5500D8ED09 /* MockCLLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCLLocationManager.swift; sourceTree = "<group>"; };
 		A452F9F724081A5500D8ED09 /* MockCLHeading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCLHeading.swift; sourceTree = "<group>"; };
 		A452F9FA24081A7200D8ED09 /* LocationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
@@ -6968,6 +6976,14 @@
 			name = "Formatting Toolbar";
 			sourceTree = "<group>";
 		};
+		A065203A2C9338E0000165D7 /* Envoy */ = {
+			isa = PBXGroup;
+			children = (
+				A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */,
+			);
+			path = Envoy;
+			sourceTree = "<group>";
+		};
 		A452F9F524081A3400D8ED09 /* MockLocationManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -7036,6 +7052,7 @@
 				B03103251F677AF600E2FCF6 /* Exploration */,
 				0E26B08A1C0FD8040004D687 /* Language */,
 				0E26B08B1C0FD80B0004D687 /* Analytics */,
+				A065203A2C9338E0000165D7 /* Envoy */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -7255,6 +7272,7 @@
 				D4B0ADFF19365F4600F0AC90 /* Analytics */,
 				BC45D57D1C32F3EA007C72F3 /* Diagnostics */,
 				BC45D5461C31E0C0007C72F3 /* App View Controller */,
+				A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */,
 				67BF28532C3DEC5300C9F5DE /* AppDelegate.swift */,
 				67BF28572C3DECA500C9F5DE /* SceneDelegate.swift */,
 				0EBCA7411C162ECF004F1FD9 /* MWKTitleLanguageController.m */,
@@ -10114,6 +10132,7 @@
 				83510B0728F4CF6400B6235B /* TalkPageErrorStateView.swift in Sources */,
 				D850A53A1F8686DE006FD295 /* WMFThemeableNavigationController.m in Sources */,
 				B083375D1DB16A09002860D2 /* WMFWelcomePanelViewController.swift in Sources */,
+				A065203F2C933EB2000165D7 /* WikiEnvoy.swift in Sources */,
 				67C6F7A627E8CB9000B9C864 /* NotificationsCenterCommonViewModel+TextExtensions.swift in Sources */,
 				7A1469C5220BC223000A20F1 /* EditHintController.swift in Sources */,
 				007CCF0126D5A10200D5EA7C /* NotificationsCenterViewController.swift in Sources */,
@@ -10210,6 +10229,7 @@
 				B0B4CF0A1CC0500E0051DF7A /* WMFArticleLanguagesSectionHeader.m in Sources */,
 				7ABE17352239DCF6006BA309 /* WelcomeAnimationViewController.swift in Sources */,
 				D837CC37231FE9CC00BA6130 /* ThemeableViewController.swift in Sources */,
+				A065203C2C933939000165D7 /* WelcomeEnvoyViewController.swift in Sources */,
 				83C0688E292EEDAF00DF1403 /* TalkPageViewController+TalkPageFormattingToolbar.swift in Sources */,
 				7A73B48221E54B4200249E09 /* EditorNavigationItemController.swift in Sources */,
 				7AF6F76622395BEC00949393 /* EditingWelcomeViewController.swift in Sources */,
@@ -11043,6 +11063,7 @@
 				D8CE24F21E698E2400DAE2E0 /* UIButton+WMFButton.m in Sources */,
 				679A24002968DAB9008D7686 /* ShiftingTopView.swift in Sources */,
 				D8CE24F31E698E2400DAE2E0 /* TableOfContentsAnimator.swift in Sources */,
+				A065203E2C933941000165D7 /* WelcomeEnvoyViewController.swift in Sources */,
 				D82E956B1F156F77007BD960 /* UIView+SubviewEnumeration.swift in Sources */,
 				D8CE24F61E698E2400DAE2E0 /* WMFReferencePageBackgroundView.swift in Sources */,
 				FFD7B85B24B3CAA0005C2471 /* ReferenceShowing.swift in Sources */,
@@ -11293,6 +11314,7 @@
 				D8E6FF6D24056AC300686272 /* ArticleViewController+ContextMenu.swift in Sources */,
 				8386BDFC2386D754007EE89D /* SinglePageWebViewController.swift in Sources */,
 				D8CE258F1E698E2400DAE2E0 /* WMFWelcomeAnimationViewControllers.swift in Sources */,
+				A06520412C933EB3000165D7 /* WikiEnvoy.swift in Sources */,
 				D8CE25901E698E2400DAE2E0 /* TableOfContentsCell.swift in Sources */,
 				D8CE25931E698E2400DAE2E0 /* WMFSettingsMenuItem.m in Sources */,
 				674E8ABA2382DF020053D206 /* DiffTransformer.swift in Sources */,
@@ -11609,6 +11631,7 @@
 				67B64D582507DE3E00FA27F3 /* ArticleAsLivingDocSectionHeaderView.swift in Sources */,
 				679A23FF2968DAB9008D7686 /* ShiftingTopView.swift in Sources */,
 				D82E956C1F156F77007BD960 /* UIView+SubviewEnumeration.swift in Sources */,
+				A065203D2C933940000165D7 /* WelcomeEnvoyViewController.swift in Sources */,
 				D8EC3DEA1E9BDA35006712EB /* TableOfContentsAnimator.swift in Sources */,
 				B0432346210680A900A9A6B6 /* WMFContentGroupKind+FeedCustomization.swift in Sources */,
 				BA45241A1F324C3100439C42 /* FontSizeSliderViewController.swift in Sources */,
@@ -11859,6 +11882,7 @@
 				D8EC3E8B1E9BDA35006712EB /* WMFWelcomeAnimationViewControllers.swift in Sources */,
 				D8EC3E8C1E9BDA35006712EB /* TableOfContentsCell.swift in Sources */,
 				FFD7B85724B3B39A005C2471 /* ReferenceBackLinksViewControllerDelegate.swift in Sources */,
+				A06520402C933EB2000165D7 /* WikiEnvoy.swift in Sources */,
 				832289DD1F7291BA0081A5FB /* SizeThatFitsReusableView.swift in Sources */,
 				674E8ABB2382DF030053D206 /* DiffTransformer.swift in Sources */,
 				83AE1C821F34BB5A004B62E0 /* ImageDimmingExampleViewController.swift in Sources */,

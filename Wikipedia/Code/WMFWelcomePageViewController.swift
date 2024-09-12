@@ -5,6 +5,7 @@ enum WMFWelcomePageType {
     case exploration
     case languages
     case analytics
+    case envoy
 }
 
 public protocol WMFWelcomeNavigationDelegate: AnyObject {
@@ -12,6 +13,8 @@ public protocol WMFWelcomeNavigationDelegate: AnyObject {
 }
 
 class WMFWelcomePageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, WMFWelcomeNavigationDelegate, Themeable {
+
+    var shouldShowOnboarding = true
 
     private var theme = Theme.standard
     
@@ -84,10 +87,15 @@ class WMFWelcomePageViewController: UIPageViewController, UIPageViewControllerDa
     
     private lazy var pageControllers: [UIViewController] = {
         var controllers:[UIViewController] = []
-        controllers.append(containerControllerForWelcomePageType(.intro))
-        controllers.append(containerControllerForWelcomePageType(.exploration))
-        controllers.append(containerControllerForWelcomePageType(.languages))
-        controllers.append(containerControllerForWelcomePageType(.analytics))
+
+        if shouldShowOnboarding {
+            controllers.append(containerControllerForWelcomePageType(.intro))
+            controllers.append(containerControllerForWelcomePageType(.exploration))
+            controllers.append(containerControllerForWelcomePageType(.languages))
+            controllers.append(containerControllerForWelcomePageType(.analytics))
+        }
+
+        controllers.append(containerControllerForWelcomePageType(.envoy))
         return controllers
     }()
     
@@ -109,7 +117,8 @@ class WMFWelcomePageViewController: UIPageViewController, UIPageViewControllerDa
         let direction:UIPageViewController.NavigationDirection = UIApplication.shared.wmf_isRTL ? .forward : .reverse
         
         setViewControllers([pageControllers.first!], direction: direction, animated: true, completion: nil)
-        
+        hideButtons(for: pageControllers.first!)
+
         configureAndAddNextButton()
         configureAndAddSkipButton()
         
@@ -118,6 +127,11 @@ class WMFWelcomePageViewController: UIPageViewController, UIPageViewControllerDa
         }
         updateFonts()
         apply(theme: theme)
+
+        if !shouldShowOnboarding {
+            NotificationCenter.default.addObserver(
+                self, selector: #selector(nextButtonTapped), name: .envoyStarted, object: nil)
+        }
     }
     
     private func configureAndAddNextButton() {

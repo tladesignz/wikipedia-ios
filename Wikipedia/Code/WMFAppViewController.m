@@ -1554,23 +1554,20 @@ static NSString *const WMFDidShowOnboarding = @"DidShowOnboarding5.3";
 }
 
 - (void)presentOnboardingIfNeededWithCompletion:(void (^)(BOOL didShowOnboarding))completion {
-    if ([self shouldShowOnboarding]) {
-        WMFWelcomeInitialViewController *vc = [WMFWelcomeInitialViewController wmf_viewControllerFromWelcomeStoryboard];
-        [vc applyTheme:self.theme];
-        vc.completionBlock = ^{
-            [self setDidShowOnboarding];
-            if (completion) {
-                completion(YES);
-            }
-        };
-        [self hideSplashView];
-        vc.modalPresentationStyle = UIModalPresentationOverFullScreen;
-        [self presentViewController:vc animated:NO completion:NULL];
-    } else {
+    BOOL shouldShowOnboarding = [self shouldShowOnboarding];
+
+    WMFWelcomeInitialViewController *vc = [WMFWelcomeInitialViewController wmf_viewControllerFromWelcomeStoryboard];
+    [vc applyTheme:self.theme];
+    vc.completionBlock = ^{
+        [self setDidShowOnboarding];
         if (completion) {
-            completion(NO);
+            completion(shouldShowOnboarding);
         }
-    }
+    };
+    vc.shouldShowOnboarding = shouldShowOnboarding;
+    [self hideSplashView];
+    vc.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    [self presentViewController:vc animated:NO completion:NULL];
 }
 
 #pragma mark - Splash

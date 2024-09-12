@@ -47,6 +47,8 @@ class WMFWelcomeAnimationForgroundViewController: WMFWelcomeAnimationViewControl
             return WMFWelcomeLanguagesAnimationView()
         case .analytics:
             return WMFWelcomeAnalyticsAnimationView()
+        case .envoy:
+            return nil
         }
     }()
 
@@ -74,7 +76,7 @@ class WMFWelcomeAnimationBackgroundViewController: WMFWelcomeAnimationViewContro
     }
     private lazy var animationViewForWelcomePageType: WMFWelcomeAnimationView? = {
         switch welcomePageType {
-        case .intro:
+        case .intro, .envoy:
             return nil
         case .exploration:
             return WMFWelcomeExplorationAnimationBackgroundView()
