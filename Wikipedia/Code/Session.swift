@@ -110,27 +110,35 @@ public class Session: NSObject {
     /// The permanent cache to utilize for this session
     weak var permanentCache: PermanentCacheController? {
         didSet {
-            defaultURLSession.finishTasksAndInvalidate()
-            defaultURLSession = Session.getURLSession(with: permanentCache, delegate: sessionDelegate)
+            _defaultURLSession?.finishTasksAndInvalidate()
+            _defaultURLSession = nil
         }
     }
     
-    private static func getURLSession(with permanentCacheController: PermanentCacheController? = nil, delegate: SessionDelegate) -> URLSession {
-        let config = URLSessionConfiguration.default
+    private func getURLSession() -> URLSession {
+        let config = WikiEnvoy.getUrlSessionConf()
         config.httpCookieStorage = Session.defaultCookieStorage
-        config.urlCache = permanentCacheController?.urlCache ?? URLCache.shared
-        return URLSession(configuration: config, delegate: delegate, delegateQueue: delegate.delegateQueue)
+        config.urlCache = permanentCache?.urlCache ?? URLCache.shared
+        return URLSession(configuration: config, delegate: sessionDelegate, delegateQueue: sessionDelegate.delegateQueue)
     }
     
     private let configuration: Configuration
-    public var defaultURLSession: URLSession
+
+    private var _defaultURLSession: URLSession?
+    public var defaultURLSession: URLSession {
+        if _defaultURLSession == nil {
+            _defaultURLSession = getURLSession()
+        }
+
+        return _defaultURLSession!
+    }
+
     private let sessionDelegate: SessionDelegate
     @objc weak var authenticationDelegate: SessionAuthenticationDelegate?
     
     @objc public required init(configuration: Configuration) {
         self.configuration = configuration
         self.sessionDelegate = SessionDelegate()
-        self.defaultURLSession = Session.getURLSession(delegate: sessionDelegate)
     }
     
     @objc public static let sharedCookieStorage = HTTPCookieStorage.sharedCookieStorage(forGroupContainerIdentifier: WMFApplicationGroupIdentifier)
@@ -140,15 +148,12 @@ public class Session: NSObject {
     }
     
     @objc public func teardown() {
-        guard defaultURLSession !== URLSession.shared else { // [NSURLSession sharedSession] may not be invalidated
-            return
-        }
-        defaultURLSession.invalidateAndCancel()
-        defaultURLSession = URLSession.shared
+        _defaultURLSession?.invalidateAndCancel()
+        _defaultURLSession = nil
     }
     
-    public let wifiOnlyURLSession: URLSession = {
-        let config = URLSessionConfiguration.default
+    public private(set) lazy var wifiOnlyURLSession: URLSession = {
+        let config = WikiEnvoy.getUrlSessionConf()
         config.httpCookieStorage = Session.defaultCookieStorage
         config.allowsCellularAccess = false
         return URLSession(configuration: config)

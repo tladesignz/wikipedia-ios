@@ -245,6 +245,11 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
                                                  name:NSNotification.showErrorBanner
                                                object:nil];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(performRemoteConf)
+                                                 name:NSNotification.envoyStarted
+                                               object:nil];
+
     [self setupReadingListsHelpers];
     self.editHintController = [[WMFEditHintController alloc] init];
 
@@ -887,8 +892,8 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
                     self.migrationComplete = YES;
                     self.migrationActive = NO;
                     [self endMigrationBackgroundTask];
-                    [self checkRemoteAppConfigIfNecessary];
-                    [self setupControllers];
+//                    [self checkRemoteAppConfigIfNecessary];
+//                    [self setupControllers];
                     [self setupWMFDataEnvironment];
                     if (!self.isWaitingToResumeApp) {
                         [self resumeApp:NULL];
@@ -896,6 +901,11 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
                 });
             }];
     }];
+}
+
+- (void)performRemoteConf {
+    [self checkRemoteAppConfigIfNecessary];
+    [self setupControllers];
 }
 
 #pragma mark - Start/Pause/Resume App

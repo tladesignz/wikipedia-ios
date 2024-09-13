@@ -1630,13 +1630,11 @@
 		83FDE79A293564AC006D55FE /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FDE798293564AC006D55FE /* Link.swift */; };
 		83FDE79B293564AC006D55FE /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FDE798293564AC006D55FE /* Link.swift */; };
 		982800D624D302BF004B1850 /* EventPlatformClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982800D524D302BF004B1850 /* EventPlatformClient.swift */; };
-		A05D237B2C8F266C006E4DDC /* GreatfireEnvoy in Frameworks */ = {isa = PBXBuildFile; productRef = A05D237A2C8F266C006E4DDC /* GreatfireEnvoy */; };
 		A065203C2C933939000165D7 /* WelcomeEnvoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */; };
 		A065203D2C933940000165D7 /* WelcomeEnvoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */; };
 		A065203E2C933941000165D7 /* WelcomeEnvoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */; };
-		A065203F2C933EB2000165D7 /* WikiEnvoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */; };
-		A06520402C933EB2000165D7 /* WikiEnvoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */; };
-		A06520412C933EB3000165D7 /* WikiEnvoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */; };
+		A0E117B72C9452C8005A56E8 /* WikiEnvoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */; };
+		A0E117B92C94551B005A56E8 /* GreatfireEnvoy in Frameworks */ = {isa = PBXBuildFile; productRef = A0E117B82C94551B005A56E8 /* GreatfireEnvoy */; };
 		A452F9F824081A5500D8ED09 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A452F9F624081A5500D8ED09 /* MockCLLocationManager.swift */; };
 		A452F9F924081A5500D8ED09 /* MockCLHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A452F9F724081A5500D8ED09 /* MockCLHeading.swift */; };
 		A452F9FB24081A7200D8ED09 /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A452F9FA24081A7200D8ED09 /* LocationManagerTests.swift */; };
@@ -4831,7 +4829,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A05D237B2C8F266C006E4DDC /* GreatfireEnvoy in Frameworks */,
 				D844D9731D6CB2600042D692 /* WMF.framework in Frameworks */,
 				83AF34F724D3341E000046D6 /* BackgroundTasks.framework in Frameworks */,
 				D8D553621DF1B63200B90177 /* QuartzCore.framework in Frameworks */,
@@ -4847,6 +4844,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E117B92C94551B005A56E8 /* GreatfireEnvoy in Frameworks */,
 				83B019D624F6C31B0014B5EF /* WidgetKit.framework in Frameworks */,
 				679603992C5D48CC009606C4 /* WMFComponents in Frameworks */,
 				D8CD975E1E83F65700ECCA9D /* UserNotifications.framework in Frameworks */,
@@ -7272,7 +7270,6 @@
 				D4B0ADFF19365F4600F0AC90 /* Analytics */,
 				BC45D57D1C32F3EA007C72F3 /* Diagnostics */,
 				BC45D5461C31E0C0007C72F3 /* App View Controller */,
-				A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */,
 				67BF28532C3DEC5300C9F5DE /* AppDelegate.swift */,
 				67BF28572C3DECA500C9F5DE /* SceneDelegate.swift */,
 				0EBCA7411C162ECF004F1FD9 /* MWKTitleLanguageController.m */,
@@ -8197,6 +8194,7 @@
 		D844D96D1D6CB2600042D692 /* WMF Framework */ = {
 			isa = PBXGroup;
 			children = (
+				A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */,
 				67BE16252A9927E1009486A6 /* DeprecatedButton.swift */,
 				67E9A11B25536B6F00C5ED31 /* ABTestsController.swift */,
 				0E28C4611D74AA55000C5919 /* Article Content */,
@@ -8973,7 +8971,6 @@
 			);
 			name = Wikipedia;
 			packageProductDependencies = (
-				A05D237A2C8F266C006E4DDC /* GreatfireEnvoy */,
 			);
 			productName = "Wikipedia-iOS";
 			productReference = D4991435181D51DE00E6073C /* Wikipedia.app */;
@@ -8997,6 +8994,7 @@
 			packageProductDependencies = (
 				67A770C7251BFE0400F94EF9 /* CocoaLumberjackSwift */,
 				679603982C5D48CC009606C4 /* WMFComponents */,
+				A0E117B82C94551B005A56E8 /* GreatfireEnvoy */,
 			);
 			productName = WMF;
 			productReference = D844D96C1D6CB2600042D692 /* WMF.framework */;
@@ -10132,7 +10130,6 @@
 				83510B0728F4CF6400B6235B /* TalkPageErrorStateView.swift in Sources */,
 				D850A53A1F8686DE006FD295 /* WMFThemeableNavigationController.m in Sources */,
 				B083375D1DB16A09002860D2 /* WMFWelcomePanelViewController.swift in Sources */,
-				A065203F2C933EB2000165D7 /* WikiEnvoy.swift in Sources */,
 				67C6F7A627E8CB9000B9C864 /* NotificationsCenterCommonViewModel+TextExtensions.swift in Sources */,
 				7A1469C5220BC223000A20F1 /* EditHintController.swift in Sources */,
 				007CCF0126D5A10200D5EA7C /* NotificationsCenterViewController.swift in Sources */,
@@ -10745,6 +10742,7 @@
 				D84B22521DAFD1E1007C44AA /* CIContext+WMFImageProcessing.m in Sources */,
 				672034E327A2531F007DC24F /* RemoteNotificationsReauthenticateOperation.swift in Sources */,
 				D81A28BE231E8F4C001CC77D /* ExtensionViewController.swift in Sources */,
+				A0E117B72C9452C8005A56E8 /* WikiEnvoy.swift in Sources */,
 				8330531F23EF051900123141 /* NSArray+WMFMapping.m in Sources */,
 				006694FC265D9F2900E23AE4 /* WidgetSettings.swift in Sources */,
 				0E728D1D1DAEE2B50074EB4B /* WMFFeedTopReadResponse.m in Sources */,
@@ -11314,7 +11312,6 @@
 				D8E6FF6D24056AC300686272 /* ArticleViewController+ContextMenu.swift in Sources */,
 				8386BDFC2386D754007EE89D /* SinglePageWebViewController.swift in Sources */,
 				D8CE258F1E698E2400DAE2E0 /* WMFWelcomeAnimationViewControllers.swift in Sources */,
-				A06520412C933EB3000165D7 /* WikiEnvoy.swift in Sources */,
 				D8CE25901E698E2400DAE2E0 /* TableOfContentsCell.swift in Sources */,
 				D8CE25931E698E2400DAE2E0 /* WMFSettingsMenuItem.m in Sources */,
 				674E8ABA2382DF020053D206 /* DiffTransformer.swift in Sources */,
@@ -11882,7 +11879,6 @@
 				D8EC3E8B1E9BDA35006712EB /* WMFWelcomeAnimationViewControllers.swift in Sources */,
 				D8EC3E8C1E9BDA35006712EB /* TableOfContentsCell.swift in Sources */,
 				FFD7B85724B3B39A005C2471 /* ReferenceBackLinksViewControllerDelegate.swift in Sources */,
-				A06520402C933EB2000165D7 /* WikiEnvoy.swift in Sources */,
 				832289DD1F7291BA0081A5FB /* SizeThatFitsReusableView.swift in Sources */,
 				674E8ABB2382DF030053D206 /* DiffTransformer.swift in Sources */,
 				83AE1C821F34BB5A004B62E0 /* ImageDimmingExampleViewController.swift in Sources */,
@@ -16964,7 +16960,7 @@
 			package = 67A770C6251BFE0400F94EF9 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
 		};
-		A05D237A2C8F266C006E4DDC /* GreatfireEnvoy */ = {
+		A0E117B82C94551B005A56E8 /* GreatfireEnvoy */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A05D23792C8F266C006E4DDC /* XCRemoteSwiftPackageReference "envoy" */;
 			productName = GreatfireEnvoy;
