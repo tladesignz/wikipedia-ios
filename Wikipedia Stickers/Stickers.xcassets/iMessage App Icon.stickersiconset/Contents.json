@@ -1,67 +1,67 @@
 {
   "images" : [
     {
-      "size" : "60x45",
+      "filename" : "wiki-unblocked-120x90.png",
       "idiom" : "iphone",
-      "filename" : "120x90.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "60x45"
     },
     {
-      "size" : "60x45",
+      "filename" : "wiki-unblocked-180x135.png",
       "idiom" : "iphone",
-      "filename" : "180x135.png",
-      "scale" : "3x"
-    },
-    {
-      "size" : "67x50",
-      "idiom" : "ipad",
-      "filename" : "134x100.png",
-      "scale" : "2x"
-    },
-    {
-      "size" : "74x55",
-      "idiom" : "ipad",
-      "filename" : "148x110.png",
-      "scale" : "2x"
-    },
-    {
-      "size" : "27x20",
-      "idiom" : "universal",
-      "filename" : "54x40.png",
-      "scale" : "2x",
-      "platform" : "ios"
-    },
-    {
-      "size" : "27x20",
-      "idiom" : "universal",
-      "filename" : "81x60.png",
       "scale" : "3x",
-      "platform" : "ios"
+      "size" : "60x45"
     },
     {
-      "size" : "32x24",
-      "idiom" : "universal",
-      "filename" : "64x48.png",
+      "filename" : "wiki-unblocked-134x100.png",
+      "idiom" : "ipad",
       "scale" : "2x",
-      "platform" : "ios"
+      "size" : "67x50"
     },
     {
-      "size" : "32x24",
+      "filename" : "wiki-unblocked-148x110.png",
+      "idiom" : "ipad",
+      "scale" : "2x",
+      "size" : "74x55"
+    },
+    {
+      "filename" : "wiki-unblocked-54x40.png",
       "idiom" : "universal",
-      "filename" : "96x72.png",
-      "scale" : "3x",
-      "platform" : "ios"
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "27x20"
     },
     {
-      "size" : "1024x768",
+      "filename" : "wiki-unblocked-81x60.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "27x20"
+    },
+    {
+      "filename" : "wiki-unblocked-64x48.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "32x24"
+    },
+    {
+      "filename" : "wiki-unblocked-96x72.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "32x24"
+    },
+    {
+      "filename" : "wiki-unblocked-1024x768.png",
       "idiom" : "ios-marketing",
-      "filename" : "1024x768.png",
+      "platform" : "ios",
       "scale" : "1x",
-      "platform" : "ios"
+      "size" : "1024x768"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

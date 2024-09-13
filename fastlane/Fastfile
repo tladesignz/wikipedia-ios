@@ -18,4 +18,24 @@ platform :ios do
     deliver(skip_binary_upload: true, skip_screenshots: true)
   end
 
+  desc 'Generate App Icon'
+  lane :generate_appicon do
+    appicon(
+      appicon_image_file: 'Icon/wiki-unblocked.png',
+      appicon_devices: [:iphone, :ipad, :ios_marketing],
+      appicon_path: 'Wikipedia/Images.xcassets',
+    )
+  end
+
+  desc 'Generate iMessage App Icon'
+  lane :generate_imessage do
+    appicon(
+      appicon_image_file: 'Icon/wiki-unblocked.png',
+      appicon_devices: [:iphone, :ipad, :ios_marketing, :messages],
+      appicon_path: 'Wikipedia Stickers/Stickers.xcassets',
+      appicon_name: 'iMessage App Icon.stickersiconset',
+      messages_extension: true
+    )
+  end
+
 end

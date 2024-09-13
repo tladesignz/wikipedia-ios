@@ -21,6 +21,24 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane ios upload_app_store_metadata
 ```
 
+Upload app store metadata
+
+### ios generate_appicon
+
+```sh
+[bundle exec] fastlane ios generate_appicon
+```
+
+Generate App Icon
+
+### ios generate_imessage
+
+```sh
+[bundle exec] fastlane ios generate_imessage
+```
+
+Generate iMessage App Icon
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
