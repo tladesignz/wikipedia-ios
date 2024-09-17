@@ -14,7 +14,7 @@ NSString *const WMFIconShortcutTypeNearby = @"org.wikimedia.wikipedia.icon-short
 
 + (UIApplicationShortcutItem *)wmf_search {
     return [[UIApplicationShortcutItem alloc] initWithType:WMFIconShortcutTypeSearch
-                                            localizedTitle:WMFLocalizedStringWithDefaultValue(@"icon-shortcut-search-title", nil, nil, @"Search Wikipedia", @"Title for app icon force touch shortcut to quickly open the search interface.")
+                                            localizedTitle:WMFLocalizedStringWithDefaultValue(@"icon-shortcut-search-title", nil, nil, @"Search Wiki Unblocked", @"Title for app icon force touch shortcut to quickly open the search interface.")
                                          localizedSubtitle:@""
                                                       icon:[UIApplicationShortcutIcon iconWithTemplateImageName:@"search"]
                                                   userInfo:nil];

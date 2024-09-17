@@ -66,9 +66,9 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Opt-in user testing</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Save photos from Wikipedia to your photo library</string>
+	<string>Save photos from Wiki Unblocked to your photo library</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Save photos from Wikipedia to your photo library</string>
+	<string>Save photos from Wiki Unblocked to your photo library</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>org.wikimedia.wikipedia.explore</string>

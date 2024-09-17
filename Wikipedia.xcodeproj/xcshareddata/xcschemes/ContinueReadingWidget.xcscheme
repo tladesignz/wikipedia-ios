@@ -30,7 +30,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D4991434181D51DE00E6073C"
-               BuildableName = "Wikipedia.app"
+               BuildableName = "Wiki Unblocked.app"
                BlueprintName = "Wikipedia"
                ReferencedContainer = "container:Wikipedia.xcodeproj">
             </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4991434181D51DE00E6073C"
-            BuildableName = "Wikipedia.app"
+            BuildableName = "Wiki Unblocked.app"
             BlueprintName = "Wikipedia"
             ReferencedContainer = "container:Wikipedia.xcodeproj">
          </BuildableReference>
