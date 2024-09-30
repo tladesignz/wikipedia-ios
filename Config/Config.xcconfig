@@ -1,14 +1,34 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
+// Avoid accidental checkins:
+// git update-index --skip-worktree Config/Config.xcconfig
+// git update-index --no-skip-worktree Config/Config.xcconfig
+
 MAIN_ID[config=Debug] =
 DEVELOPMENT_TEAM[config=Debug] =
-PROVISIONING_PROFILE_SPECIFIER[config=Debug] =
+CODE_SIGN_IDENTITY[config=Debug] = iPhone Developer
+
+MAIN_PROVISIONING_PROFILE_SPECIFIER[config=Debug] =
+CONTINUE_READING_PROVISIONING_PROFILE_SPECIFIER[config=Debug] =
+STICKERS_PROVISIONING_PROFILE_SPECIFIER[config=Debug] =
+WIDGETS_PROVISIONING_PROFILE_SPECIFIER[config=Debug] =
+NOTIFICATION_SERVICE_PROVISIONING_PROFILE_SPECIFIER[config=Debug] =
+
 
 MAIN_ID[config=Release] = org.greatfire.wikiunblocked
 DEVELOPMENT_TEAM[config=Release] =
-PROVISIONING_PROFILE_SPECIFIER[config=Release] =
+CODE_SIGN_IDENTITY[config=Release] =
+
+MAIN_PROVISIONING_PROFILE_SPECIFIER[config=Release] =
+CONTINUE_READING_PROVISIONING_PROFILE_SPECIFIER[config=Release] =
+STICKERS_PROVISIONING_PROFILE_SPECIFIER[config=Release] =
+WIDGETS_PROVISIONING_PROFILE_SPECIFIER[config=Release] =
+NOTIFICATION_SERVICE_PROVISIONING_PROFILE_SPECIFIER[config=Release] =
 
 WMF_APP_GROUP_IDENTIFIER = group.$(MAIN_ID)
 
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) MAIN_ID="$(MAIN_ID)" WMF_APP_GROUP_IDENTIFIER="$(WMF_APP_GROUP_IDENTIFIER)"
+
+MARKETING_VERSION = 7.5.9
+CURRENT_PROJECT_VERSION = 1
