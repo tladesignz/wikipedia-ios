@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D8EC3DCE1E9BDA35006712EB"
-               BuildableName = "Staging.app"
+               BuildableName = "Wiki Unblocked.app"
                BlueprintName = "Staging"
                ReferencedContainer = "container:Wikipedia.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D8EC3DCE1E9BDA35006712EB"
-            BuildableName = "Staging.app"
+            BuildableName = "Wiki Unblocked.app"
             BlueprintName = "Staging"
             ReferencedContainer = "container:Wikipedia.xcodeproj">
          </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D8EC3DCE1E9BDA35006712EB"
-            BuildableName = "Staging.app"
+            BuildableName = "Wiki Unblocked.app"
             BlueprintName = "Staging"
             ReferencedContainer = "container:Wikipedia.xcodeproj">
          </BuildableReference>

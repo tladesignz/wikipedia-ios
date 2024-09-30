@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D8CE24D71E698E2400DAE2E0"
-               BuildableName = "Experimental.app"
+               BuildableName = "Wiki Unblocked.app"
                BlueprintName = "Experimental"
                ReferencedContainer = "container:Wikipedia.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D8CE24D71E698E2400DAE2E0"
-            BuildableName = "Experimental.app"
+            BuildableName = "Wiki Unblocked.app"
             BlueprintName = "Experimental"
             ReferencedContainer = "container:Wikipedia.xcodeproj">
          </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D8CE24D71E698E2400DAE2E0"
-            BuildableName = "Experimental.app"
+            BuildableName = "Wiki Unblocked.app"
             BlueprintName = "Experimental"
             ReferencedContainer = "container:Wikipedia.xcodeproj">
          </BuildableReference>
