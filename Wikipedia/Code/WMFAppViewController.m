@@ -1104,13 +1104,13 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
     if (!item) {
         return NO;
     }
-    if ([item.type isEqualToString:WMFIconShortcutTypeSearch]) {
+    if ([item.type isEqualToString:UIApplicationShortcutItem.wmfTypeSearch]) {
         return YES;
-    } else if ([item.type isEqualToString:WMFIconShortcutTypeRandom]) {
+    } else if ([item.type isEqualToString:UIApplicationShortcutItem.wmfTypeRandom]) {
         return YES;
-    } else if ([item.type isEqualToString:WMFIconShortcutTypeNearby]) {
+    } else if ([item.type isEqualToString:UIApplicationShortcutItem.wmfTypeNearby]) {
         return YES;
-    } else if ([item.type isEqualToString:WMFIconShortcutTypeContinueReading]) {
+    } else if ([item.type isEqualToString:UIApplicationShortcutItem.wmfTypeContinueReading]) {
         return YES;
     } else {
         return NO;
@@ -1134,18 +1134,18 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
     }
     self.unprocessedShortcutItem = nil;
 
-    if ([item.type isEqualToString:WMFIconShortcutTypeSearch]) {
+    if ([item.type isEqualToString:UIApplicationShortcutItem.wmfTypeSearch]) {
         if (self.visibleArticleViewController) {
             [self showSearchInCurrentNavigationController];
         } else {
             [self switchToSearchAnimated:NO];
             [self.searchViewController makeSearchBarBecomeFirstResponder];
         }
-    } else if ([item.type isEqualToString:WMFIconShortcutTypeRandom]) {
+    } else if ([item.type isEqualToString:UIApplicationShortcutItem.wmfTypeRandom]) {
         [self showRandomArticleAnimated:NO];
-    } else if ([item.type isEqualToString:WMFIconShortcutTypeNearby]) {
+    } else if ([item.type isEqualToString:UIApplicationShortcutItem.wmfTypeNearby]) {
         [self showNearbyAnimated:NO];
-    } else if ([item.type isEqualToString:WMFIconShortcutTypeContinueReading]) {
+    } else if ([item.type isEqualToString:UIApplicationShortcutItem.wmfTypeContinueReading]) {
         [self showLastReadArticleAnimated:NO];
     }
     if (completion) {

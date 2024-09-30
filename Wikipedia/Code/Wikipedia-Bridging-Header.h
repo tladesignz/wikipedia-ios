@@ -63,3 +63,6 @@
 #import "TUSafariActivity.h"
 #import "DDLog+WMFLogger.h"
 #import "NYTPhotoViewer.h"
+
+// Config
+#import "Config.h"

@@ -1,0 +1,14 @@
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+MAIN_ID[config=Debug] =
+DEVELOPMENT_TEAM[config=Debug] =
+PROVISIONING_PROFILE_SPECIFIER[config=Debug] =
+
+MAIN_ID[config=Release] = org.greatfire.wikiunblocked
+DEVELOPMENT_TEAM[config=Release] =
+PROVISIONING_PROFILE_SPECIFIER[config=Release] =
+
+WMF_APP_GROUP_IDENTIFIER = group.$(MAIN_ID)
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) MAIN_ID="$(MAIN_ID)" WMF_APP_GROUP_IDENTIFIER="$(WMF_APP_GROUP_IDENTIFIER)"

@@ -2,12 +2,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString *const WMFIconShortcutTypeSearch;
-extern NSString *const WMFIconShortcutTypeContinueReading;
-extern NSString *const WMFIconShortcutTypeRandom;
-extern NSString *const WMFIconShortcutTypeNearby;
-
 @interface UIApplicationShortcutItem (WMFShortcutItem)
+
+@property (class, nonatomic, assign, readonly, nonnull) NSString *wmfTypeSearch;
+@property (class, nonatomic, assign, readonly, nonnull) NSString *wmfTypeContinueReading;
+@property (class, nonatomic, assign, readonly, nonnull) NSString *wmfTypeRandom;
+@property (class, nonatomic, assign, readonly, nonnull) NSString *wmfTypeNearby;
 
 + (UIApplicationShortcutItem *)wmf_search;
 + (UIApplicationShortcutItem *)wmf_random;
