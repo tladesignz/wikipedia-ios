@@ -1631,6 +1631,8 @@
 		A065203C2C933939000165D7 /* WelcomeEnvoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */; };
 		A065203D2C933940000165D7 /* WelcomeEnvoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */; };
 		A065203E2C933941000165D7 /* WelcomeEnvoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */; };
+		A0946B442CAAC43700540925 /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0946B432CAAC43700540925 /* Proxy.swift */; };
+		A0946B482CAAC69700540925 /* proxies in Resources */ = {isa = PBXBuildFile; fileRef = A0946B472CAAC69300540925 /* proxies */; };
 		A0BDD8872C9997E30087E2A7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDD8862C9997B10087E2A7 /* Config.swift */; };
 		A0BDD8882C9997E80087E2A7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDD8862C9997B10087E2A7 /* Config.swift */; };
 		A0BDD8892C9997E90087E2A7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDD8862C9997B10087E2A7 /* Config.swift */; };
@@ -3838,6 +3840,9 @@
 		982800D524D302BF004B1850 /* EventPlatformClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPlatformClient.swift; sourceTree = "<group>"; };
 		A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiEnvoy.swift; sourceTree = "<group>"; };
 		A065203B2C933939000165D7 /* WelcomeEnvoyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeEnvoyViewController.swift; sourceTree = "<group>"; };
+		A0946B432CAAC43700540925 /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
+		A0946B452CAAC51200540925 /* proxies.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = proxies.plist; sourceTree = "<group>"; };
+		A0946B472CAAC69300540925 /* proxies */ = {isa = PBXFileReference; lastKnownFileType = text; path = proxies; sourceTree = "<group>"; };
 		A0BDD8812C99944C0087E2A7 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		A0BDD8842C99974C0087E2A7 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		A0BDD8852C99974C0087E2A7 /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
@@ -8121,6 +8126,9 @@
 			isa = PBXGroup;
 			children = (
 				A05D237C2C8F26F5006E4DDC /* WikiEnvoy.swift */,
+				A0946B432CAAC43700540925 /* Proxy.swift */,
+				A0946B452CAAC51200540925 /* proxies.plist */,
+				A0946B472CAAC69300540925 /* proxies */,
 				67BE16252A9927E1009486A6 /* DeprecatedButton.swift */,
 				67E9A11B25536B6F00C5ED31 /* ABTestsController.swift */,
 				0E28C4611D74AA55000C5919 /* Article Content */,
@@ -9675,6 +9683,7 @@
 				67C169A22BEC0B9900F09043 /* wikipedia-magicwords in Resources */,
 				D801C9351EB8E131001FA294 /* Localizable.stringsdict in Resources */,
 				83ACAAA824E6E6C5003B3035 /* wikipedia-languages.json in Resources */,
+				A0946B482CAAC69700540925 /* proxies in Resources */,
 				7A00D177208FB72900A9C7BA /* BatchEditToolbarViewController.xib in Resources */,
 				D8E4CCAA1D931CE100EB6C61 /* assets in Resources */,
 				83ACAAA924E6E6E3003B3035 /* wikipedia-namespaces in Resources */,
@@ -10808,6 +10817,7 @@
 				D84C361A1F32403D00895FA1 /* NewsCollectionViewCell+WMFFeedContentDisplaying.swift in Sources */,
 				7AEF527120ADD74D00DDF791 /* WMFCaptcha.swift in Sources */,
 				678C7C2A23BE67F0001AC4D5 /* CacheController.swift in Sources */,
+				A0946B442CAAC43700540925 /* Proxy.swift in Sources */,
 				D8619BA61FBB10240045C8BC /* ReadingListEntry+CoreDataClass.swift in Sources */,
 				834400B020B3368A005F087D /* NSCharacterSet+WMFExtras.m in Sources */,
 				D837B5AA1F0D0D1600DCB9CD /* WMFFeedOnThisDayEvent+LocalizedDates.swift in Sources */,

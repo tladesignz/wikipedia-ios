@@ -17,10 +17,7 @@ public class WikiEnvoy {
     public class func start() async {
         print("[\(String(describing: self))] #start")
 
-        await Envoy.shared.start(
-            urls: [
-            ],
-            testDirect: true)
+        await Envoy.shared.start(urls: Proxy.fetch().map { $0.url }, testDirect: false)
 
         started = true
 
